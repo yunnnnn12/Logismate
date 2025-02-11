@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  fastapi:
+    build:
+      dockerfile: dockerfile
+    image: fastapi-app
+    container_name: fastapi-logismate
+    restart: always
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  
+
+  db:
+    image: mysql:9.1.0 
+    container_name: mysql-logismate
+    restart: always
+    environment:
+      MYSQL_HOST : "rootimpact10.cpuyiuu4iuwi.ap-northeast-2.rds.amazonaws.com"
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: RootImpact10
+      MYSQL_DATABASE: server
+    ports:
+      - "3300:3300"
+    volumes:
+      - ./mysql/conf.d:/etc/mysql/conf.d
+      - ./mysql/data:/var/lib/mysql #mysql데이터가 저장될 볼륨
