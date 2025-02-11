@@ -4,7 +4,7 @@ services:
   fastapi:
     build:
       dockerfile: dockerfile
-    image: fastapi-app
+    image: sonchaeyun/fastapi-app
     container_name: fastapi-logismate
     restart: always
     ports:
