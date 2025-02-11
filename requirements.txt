@@ -1,6 +1,11 @@
 fastapi==0.115.6
 uvicorn[standard]==0.34.0
 mysql-connector-python==8.0.33
-httpx
+fastapi
+pydantic
 requests
-
+httpx
+mysql-connector-python
+scikit-learn
+pandas
+arrow
