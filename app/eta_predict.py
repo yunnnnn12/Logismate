@@ -1,8 +1,8 @@
 import requests
-from features.weather import get_weather
-from features.wind_speed import get_wind_speed_kmh
-from features.wave_height import get_wave_height
-from features.get_coordinate import get_coordinates_openweather
+from app.features.weather import get_weather
+from app.features.wind_speed import get_wind_speed_kmh
+from app.features.wave_height import get_wave_height
+from app.features.get_coordinate import get_coordinates_openweather
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
