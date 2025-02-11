@@ -4,7 +4,7 @@ from app.database import init_db, get_mydb, connect
 from app.schema import ForwarderCreate, CargoResponse, ETAResponse
 import httpx, asyncio, websockets, json, requests
 from typing import List, Dict
-from eta_predict import calculate_eta
+from app.eta_predict import calculate_eta
 from requests.exceptions import Timeout, RequestException
 
 from app.crud import addForwarder
